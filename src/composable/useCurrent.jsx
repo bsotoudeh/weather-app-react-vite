@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useEffect, useState } from "react";
-import { fetchDataCurrent } from "./data";
+import { fetchDataCurrent } from "./useWeatherAPI";
 import { useInput } from "../context/InputContext";
 
 const fetchCurrentData = async (search) => {

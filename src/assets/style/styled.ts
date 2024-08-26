@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { percentData } from "../../helper/functionsHelper";
+import { formatAsPercent } from "../../helper/percentageHelper";
 
 export const WrapperFont = styled.section`
   font-family: Lato;
@@ -36,7 +36,7 @@ export const WrapperSidebar = styled.section`
 
 export const Percent = styled.section<{ $data?: number | undefined }>`
   background-color: rgba(139, 177, 253, 255);
-  width: ${(props) => (props.$data ? percentData(props.$data) : "0px")};
+  width: ${(props) => (props.$data ? formatAsPercent(props.$data) : "0px")};
   padding: 0;
   border-radius: 15px;
   height: 20px;

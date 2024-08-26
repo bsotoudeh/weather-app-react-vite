@@ -1,6 +1,6 @@
 import { Percent, ProgressStyled } from "../assets/style/styled";
 
-function Progress({ data }) {
+function ProgressIndicator({ data }) {
   return (
     <>
       <ProgressStyled>
@@ -10,4 +10,4 @@ function Progress({ data }) {
   );
 }
 
-export default Progress;
+export default ProgressIndicator;

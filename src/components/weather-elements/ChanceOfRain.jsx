@@ -1,5 +1,5 @@
 import useForecast from "../../composable/useForecast";
-import Progress from "../../helper/progress";
+import ProgressIndicator from "../../helper/progressHelper";
 
 function ChanceOfRain() {
   const { dataForecast } = useForecast();
@@ -19,28 +19,28 @@ function ChanceOfRain() {
       <div className="flex mb-1 mt-4">
         <span className="ml-8 mr-4">0:00</span>
         <div className="flex flex-row mb-1">
-          <Progress data={rainNumber0} />
+          <ProgressIndicator data={rainNumber0} />
           <span className="ml-2 text-xs font-bold mt-1">{rainNumber0}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-4">7:00</span>
         <div className="flex flex-row">
-          <Progress data={rainNumber6} />
+          <ProgressIndicator data={rainNumber6} />
           <span className="ml-2 text-xs font-bold mt-1">{rainNumber6}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-2">15:00</span>
         <div className="flex flex-row">
-          <Progress data={rainNumber18} />
+          <ProgressIndicator data={rainNumber18} />
           <span className="ml-2 text-xs font-bold mt-1">{rainNumber18}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-2">20:00</span>
         <div className="flex flex-row">
-          <Progress data={rainNumber23} />
+          <ProgressIndicator data={rainNumber23} />
           <span className="ml-2 text-xs font-bold mt-1">{rainNumber23}%</span>
         </div>
       </div>
