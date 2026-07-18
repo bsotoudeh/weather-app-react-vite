@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Weather App (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather app built with React and Vite, powered by [WeatherAPI.com](https://www.weatherapi.com/).
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Get an API Key
 
-## Expanding the ESLint configuration
+1. Go to [weatherapi.com](https://www.weatherapi.com/) and sign up for a free account (no credit card required).
+2. Once logged in, copy your API key from your dashboard.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 2. Set Up Environment Variables
 
-- Configure the top-level `parserOptions` property like this:
+Copy the sample env file and add your key:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+cp .env.sample .env
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Then open `.env` and paste your API key:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```dotenv
+VITE_WEATHER_API_KEY=your_api_key_here
 ```
+
+### 3. Install Dependencies
+
+```bash
+yarn
+```
+
+### 4. Run the App
+
+```bash
+yarn dev
+```
+
+The app should now be running locally — check your terminal for the local URL (usually `http://localhost:5173`).
+
+## Preview
+
+![Weather App Screenshot](./src/assets/img/weather-app.png)
